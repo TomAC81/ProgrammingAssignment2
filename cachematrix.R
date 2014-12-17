@@ -1,7 +1,8 @@
-## Put comments here that give an overall description of what your
-## functions do
-
-## Write a short comment describing this function
+## makeCacheMatrix creates a list containing functions
+## sets the value of the vector
+## gets the value of the vector
+## sets the value of the mean
+## gets the value of the mean
 
 makeCacheMatrix <- function(x = matrix()) {
   m <- NULL
@@ -19,7 +20,9 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Write a short comment describing this function
+## The following calculates the mean of makeCacheMatrix output
+## created before. First, checks mean value.
+## It calculates the mean of the data and sets the mean value.
 
 cacheSolve <- function(x = matrix(), ...) {
   m <- x$getmatrix()
@@ -28,8 +31,7 @@ cacheSolve <- function(x = matrix(), ...) {
     return(m)
   }
   matrix <- x$get()
-  m <- solve(matrix, ...)
+  m <- solve(matrix, ...) ## Return a matrix that is the inverse of 'x'
   x$setmatrix(m)
   m
 }
-        ## Return a matrix that is the inverse of 'x'
